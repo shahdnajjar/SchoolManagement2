@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.Appcontroller"
+            style="-fx-background-color: #f0f4f8;">
+    <GridPane alignment="CENTER" hgap="20" vgap="20" 
+              AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" 
+              AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0">
+        
+        <columnConstraints>
+            <ColumnConstraints percentWidth="50"/>
+            <ColumnConstraints percentWidth="50"/>
+        </columnConstraints>
+        
+        <rowConstraints>
+            <RowConstraints percentHeight="100"/>
+        </rowConstraints>
+        
+        <!-- Section Gauche (Image) -->
+        <AnchorPane GridPane.columnIndex="0" 
+                    style="-fx-background-color: #ffffff; 
+                           -fx-padding: 30; 
+                           -fx-background-radius: 15;
+                           -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 5);">
+            <Text text="We learn" 
+                  AnchorPane.topAnchor="20" 
+                  AnchorPane.leftAnchor="20"
+                  style="-fx-font-size: 24px; 
+                         -fx-font-weight: bold; 
+                         -fx-fill: #1a5f7a;
+                              -fx-text-alignment: center; 
+                 -fx-alignment: center;"/>
+            
+            <ImageView fx:id="libraryImage" 
+                       fitWidth="400" 
+                       fitHeight="400" 
+                       preserveRatio="true"
+                       AnchorPane.leftAnchor="50" 
+                       AnchorPane.rightAnchor="50" 
+                       AnchorPane.topAnchor="100" 
+                       AnchorPane.bottomAnchor="50">
+                <image>
+                    <Image url="@school.png"/>
+                </image>
+            </ImageView>
+        </AnchorPane>
+        
+        <!-- Section Droite (Formulaire) -->
+        <AnchorPane GridPane.columnIndex="1" 
+                    style="-fx-background-color: #ffffff; 
+                           -fx-padding: 40; 
+                           -fx-background-radius: 15;
+                           -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 5);">
+            <Text text="Acceder a votre compte" 
+                  AnchorPane.topAnchor="20" 
+                  AnchorPane.leftAnchor="0"
+                  style="-fx-font-size: 26px; 
+                         -fx-font-weight: bold; 
+                         -fx-fill: #1a5f7a;"/>
+            
+            <TextField fx:id="emailField" 
+                       promptText="E-mail" 
+                       AnchorPane.topAnchor="240" 
+                       AnchorPane.leftAnchor="0" 
+                       AnchorPane.rightAnchor="0"
+                       style="-fx-padding: 12; 
+                              -fx-background-color: #e9f1f7; 
+                              -fx-background-radius: 8; 
+                              -fx-font-size: 14px;"/>
+
+            <PasswordField fx:id="passwordField" 
+                           promptText="Mot de passe" 
+                           AnchorPane.topAnchor="170" 
+                           AnchorPane.leftAnchor="0" 
+                           AnchorPane.rightAnchor="0"
+                           style="-fx-padding: 12; 
+                                  -fx-background-color: #e9f1f7; 
+                                  -fx-background-radius: 8; 
+                                  -fx-font-size: 14px;"/>
+            
+            <Button text="S'INSCRIRE" 
+                    fx:id="signupButton" 
+                    AnchorPane.topAnchor="390" 
+                    AnchorPane.leftAnchor="0" 
+                    AnchorPane.rightAnchor="0"
+                    style="-fx-background-color: #1a5f7a; 
+                           -fx-text-fill: white; 
+                           -fx-font-size: 16px; 
+                           -fx-font-weight: bold; 
+                           -fx-padding: 12 0; 
+                           -fx-background-radius: 8;
+                           -fx-cursor: hand;"/>
+            
+            <Button text="Déjà un compte ? Connectez-vous" 
+                    fx:id="loginButton" 
+                    AnchorPane.topAnchor="450" 
+                    AnchorPane.leftAnchor="0" 
+                    AnchorPane.rightAnchor="0"
+                    style="-fx-background-color: transparent; 
+                           -fx-text-fill: #1a5f7a; 
+                           -fx-font-size: 14px;
+                           -fx-cursor: hand;"/>
+        </AnchorPane>
+    </GridPane>
+</AnchorPane>
